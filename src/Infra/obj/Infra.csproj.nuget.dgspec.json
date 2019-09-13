@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sample\\Clean architecture\\src\\Infra\\Infra.csproj": {}
+    "C:\\Sample\\DDD_With_Docker\\src\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "C:\\Sample\\Clean architecture\\src\\Application\\Application.csproj": {
+    "C:\\Sample\\DDD_With_Docker\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sample\\Clean architecture\\src\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Sample\\DDD_With_Docker\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Sample\\Clean architecture\\src\\Application\\Application.csproj",
+        "projectPath": "C:\\Sample\\DDD_With_Docker\\src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\d_tra\\.nuget\\packages\\",
-        "outputPath": "C:\\Sample\\Clean architecture\\src\\Application\\obj\\",
+        "outputPath": "C:\\Sample\\DDD_With_Docker\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj"
+              "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj": {
+    "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\d_tra\\.nuget\\packages\\",
-        "outputPath": "C:\\Sample\\Clean architecture\\src\\Domain\\obj\\",
+        "outputPath": "C:\\Sample\\DDD_With_Docker\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -116,14 +116,14 @@
         }
       }
     },
-    "C:\\Sample\\Clean architecture\\src\\Infra\\Infra.csproj": {
+    "C:\\Sample\\DDD_With_Docker\\src\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sample\\Clean architecture\\src\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Sample\\DDD_With_Docker\\src\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Sample\\Clean architecture\\src\\Infra\\Infra.csproj",
+        "projectPath": "C:\\Sample\\DDD_With_Docker\\src\\Infra\\Infra.csproj",
         "packagesPath": "C:\\Users\\d_tra\\.nuget\\packages\\",
-        "outputPath": "C:\\Sample\\Clean architecture\\src\\Infra\\obj\\",
+        "outputPath": "C:\\Sample\\DDD_With_Docker\\src\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -142,11 +142,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Sample\\Clean architecture\\src\\Application\\Application.csproj": {
-                "projectPath": "C:\\Sample\\Clean architecture\\src\\Application\\Application.csproj"
+              "C:\\Sample\\DDD_With_Docker\\src\\Application\\Application.csproj": {
+                "projectPath": "C:\\Sample\\DDD_With_Docker\\src\\Application\\Application.csproj"
               },
-              "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Sample\\Clean architecture\\src\\Domain\\Domain.csproj"
+              "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Sample\\DDD_With_Docker\\src\\Domain\\Domain.csproj"
               }
             }
           }
