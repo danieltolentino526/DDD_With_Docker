@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  db.sample.test:
+    image: postgres:9.5
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - postgres-network
+
+  webapi:   
+    image: webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+    environment:
+      TEST_CONN: Host=db.sample.test;Port=5432;Database=DB_TESTE;User Id=postgres;Password=postgres;   
+    ports:
+      - 54217:80
+    depends_on:
+      - db.sample.test
+    networks:
+      - postgres-network
+
+volumes: 
+  pgdata:
+
+networks:
+  postgres-network:
