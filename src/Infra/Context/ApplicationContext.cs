@@ -13,19 +13,24 @@ namespace Infra.Context
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
+            var optionsBuilder = new DbContextOptionsBuilder();
+
+
+            optionsBuilder.UseInMemoryDatabase("DB_Resource");
 
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-            //optionsBuilder.UseInMemoryDatabase("DB_Resource");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseInMemoryDatabase("DB_Resource");
 
-            //base.OnConfiguring(optionsBuilder);
-        //}
+            base.OnConfiguring(optionsBuilder);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CustomerMap());
+            modelBuilder.ApplyConfiguration(new CallBackMap());
             base.OnModelCreating(modelBuilder);
 
         }

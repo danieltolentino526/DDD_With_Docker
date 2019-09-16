@@ -8,9 +8,9 @@ namespace Domain.Entities.CallBack
         public string Description { get; private set; }
         public EntryType Status { get; set; }
 
-        public CallBack(Guid callNUmber, string description, EntryType status)
+        public CallBack(Guid id, string description, EntryType status)
         {
-            this.Id = callNUmber;
+            this.Id = id;
             this.Description = description;
             this.Status = Status;
 

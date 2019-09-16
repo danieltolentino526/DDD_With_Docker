@@ -9,8 +9,8 @@ namespace Infra.EntityConfig
         public void Configure(EntityTypeBuilder<CallBack> builder)
         {
             builder.ToTable("CallBack", "Resource")
-                .Ignore(x=> x.ValidationResult)
-                .HasKey();
+             .Ignore(x => x.ValidationResult)
+             .HasKey(x => x.Id);
 
             builder.Property(x => x.Description).IsRequired();
 
