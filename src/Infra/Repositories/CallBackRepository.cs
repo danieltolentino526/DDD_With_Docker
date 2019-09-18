@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Infra.Repositories
 {
-    public class CallBackRepository : ICallBackReadOnlyRepository, ICallBackWriteOnlyRepository
+    public class CallBackRepository : ICallBackReadOnlyRepository, ICallBackWriteOnlyRepository, IDisposable
     {
         private readonly ApplicationContext context;
 
@@ -22,6 +22,11 @@ namespace Infra.Repositories
             context.CallBack.Add(callBack);
 
             return context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            context.Dispose();
         }
 
         public CallBack Find(Guid id)

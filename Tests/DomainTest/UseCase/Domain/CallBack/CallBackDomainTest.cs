@@ -1,6 +1,4 @@
-﻿
-using Clean.Tests.Builder.CallBack;
-using Domain.Entities.CallBack;
+﻿using Clean.Tests.Builder.CallBack;
 using FluentAssertions;
 using System;
 using Xunit;
@@ -8,9 +6,7 @@ using Xunit;
 namespace Clean.Tests.UseCase.Domain.CallBack
 {
     public class CallBackDomainTest
-    {
-        enum Type { invalid = 0 };
-
+    {       
         [Fact]
         public void ShoudCreateCallBack()
         {
@@ -38,17 +34,6 @@ namespace Clean.Tests.UseCase.Domain.CallBack
             callback.IsValid.Should().BeFalse();
             callback.ValidationResult.Errors.Should().HaveCountGreaterThan(0);
         }
-
-
-        [Fact]
-        public void StatusShouldBewRequired()
-        {            
-            var status = (EntryType)Type.invalid;
-
-            var callback = BuilderCallBack.New().WithStatus(status).Build();
-
-            callback.IsValid.Should().BeFalse();
-            callback.ValidationResult.Errors.Should().HaveCountGreaterThan(0);
-        }
+        
     }
 }

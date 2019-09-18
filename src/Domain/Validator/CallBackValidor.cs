@@ -14,9 +14,7 @@ namespace Domain.Validator
 
             RuleFor(x => x.Description)
                 .NotEmpty()
-                .NotNull();
-
-            RuleFor(x => x.Status).IsInEnum();
+                .NotNull();               
 
         }
     }

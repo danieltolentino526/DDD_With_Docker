@@ -1,8 +1,8 @@
-﻿
-using Domain.Entities.CallBack;
+﻿using Domain.Entities.CallBack;
 using Domain.Entities.Customer;
 using Infra.EntityConfig;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Infra.Context
 {
@@ -13,16 +13,13 @@ namespace Infra.Context
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-            var optionsBuilder = new DbContextOptionsBuilder();
-
-
-            optionsBuilder.UseInMemoryDatabase("DB_Resource");
 
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("DB_Resource");
+            if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DB_TYPE")))
+                optionsBuilder.UseInMemoryDatabase("DB_Resource");
 
             base.OnConfiguring(optionsBuilder);
         }

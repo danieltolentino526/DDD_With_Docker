@@ -14,7 +14,7 @@ namespace Domain.Validator
                 .NotEqual(new Guid());                
 
             RuleFor(x => x.Name)
-                .NotEmpty()
+                .NotEmpty().WithMessage("Nome nao poder ser vazio")
                 .NotNull();
         }
     }
